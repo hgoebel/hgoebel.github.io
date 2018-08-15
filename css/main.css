@@ -1,0 +1,375 @@
+/**************************************
+* CSS Reset
+* Eric Meyer's Reset CSS v2.0 - http://cssreset.com
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ul {
+    list-style: none;
+}
+ol {
+    list-style: decimal;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/** BEGIN OF CUSTOM CSS **/
+
+
+html {
+    --color-primary-text: #333;
+    --color-secondary-text: rgba(0,0,0,0.54);
+    --color-nav-text: #aaa;
+    --color-nav-accent: #2518b5;
+    --color-nav-active: #00356e;
+    --color-accent: #D91F5D;
+    --color-primary: #58595B;
+    --color-base: #DBDBDB;
+    --color-half-balance: #D1BDCB;
+    --color-balance: #aa9c84;
+    --color-inverse: #FFFFFF;
+
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+    background: none repeat scroll 0 0 #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: inherit;
+    color: var(--color-primary-text);
+}
+
+footer {
+    padding-bottom: 3em;
+}
+
+main {
+    box-sizing: border-box;
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-size: 1.15rem;
+		font-weight: bold;
+		line-height: 1.75em;
+		margin-bottom: .5em;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin-bottom: 3rem;
+}
+
+/** SECTION: ABOUT **/
+
+section#about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+
+section#about img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 360px;
+    margin-right: 2rem;
+}
+
+section#about p {
+		margin-bottom: 2rem;
+}
+
+/** SECTION: POSTS **/
+
+section#posts ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section#posts ul > li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+section#posts .date {
+    font-size: 0.869rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary-text);
+    margin-right: .5rem;
+}
+
+section#posts a {
+    font-size: 1rem;
+    line-height: 1.15em;
+    border-bottom: 0.1em solid transparent;
+}
+
+section#posts a:hover {
+    color: #2518b5 !important;
+    border-bottom: 0.1em solid #2518b5;
+}
+
+/** POST LAYOUT **/
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #222;
+    letter-spacing: 0;
+    line-height: 1.8em;
+    cursor: default;
+}
+
+article h1 {
+    font-size: 1.15rem;
+    line-height: 1em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+article h3 {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+h4.date {
+    font-size: 0.869rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary-text);
+    margin-bottom: .5rem;
+}
+
+article p {
+    margin-bottom: 2em;
+}
+
+article li {
+    margin-bottom: .5em;
+}
+
+article li > a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+@media screen and (min-width: 672px) {
+    article {
+        max-width: 60vw;
+        font-size: 1.15em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    article {
+        max-width: 520px;
+        font-size: 1.15em;
+    }
+}
+
+
+h2 {
+    display: block;
+    color: #555;
+    margin: 18px 0 18px 0;
+    font-size: 24px; font-weight: 600;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+
+h5 { display: block; margin: 0; font-size: 12px; font-weight: 400; line-height: normal; }
+h6 { display: block; margin: 0; font-size: 12px; font-weight: 400; line-height: normal; }
+
+.snippet {
+    display: block;
+    font-weight: 400;
+    max-height: 195px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sub-title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+blockquote {
+    font-style: italic;
+    margin-left: -21px;
+    margin-bottom: 1.75em;
+    padding-left: 18px;
+    border-left: 3px solid #444;
+}
+
+blockquote > p {
+    padding: 3px 6px 12px 0;
+}
+
+.highlight {
+    color: #42a2e2;
+}
+
+
+/**************************************
+* Primitives
+*/
+
+
+a {
+    text-decoration: none;
+    color: #2518b5;
+    font-weight: 400;
+    border-bottom: 0.1em solid #2518b5;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+time {
+    font-weight: bold !important;
+}
+
+input[type="email"] {
+    outline: none;
+
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 6px 8px;
+    min-width: 20em;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    -webkit-box-shadow: inset 0 0 3px #c0c0c0;
+    box-shadow: inset 0 0 3px #c0c0c0;
+    border: 1px solid #777;
+}
+
+button {
+    display: inline-block;
+
+    font-size: 0.75em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--color-primary-text);
+    padding: .5em .75em;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+}
+
+button:active {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.149);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.149);
+}
+
+
+/**************************************
+* Custom Elements
+*/
+
+.em {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ul.link-collection a {
+    font-size: 1.44em;
+}
+
+ul.link-collection p {
+    font-size: 1.2em;
+}
